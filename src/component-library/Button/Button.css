@@ -1,11 +1,13 @@
-.Card {
-  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
-  margin: 1rem;
-  padding: 1rem;
+.Button {
+  padding: .5rem 1rem;
   border-radius: .5rem;
-  transition: 0.3s;
+  transition: 0.15s;
+  color: white;
+  background-color: rgb(0, 102, 255);
+  cursor: pointer;
 }
 
-.Card:hover {
-  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.2);
+.Button:hover {
+  background-color: rgb(0, 120, 255);
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2); ;
 }

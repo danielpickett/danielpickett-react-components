@@ -5,7 +5,7 @@ import { Button } from './component-library';
 function App() {
   return (
     <div className="App">
-      <Button>Sample Card</Button>
+      <Button>This Sample Button</Button>
     </div>
   );
 }
