@@ -1,2 +1,7 @@
-src/
 node_modules
+src/
+public/
+.bablerc
+.gitignore
+README.md
+tsconfig.json

@@ -1,7 +1,7 @@
 {
   "name": "danielpickett-react-components",
   "version": "0.1.13",
-  "main": "dist/index.js",
+  "module": "dist/index.js",
   "private": false,
   "types": "dist/index.d.ts",
   "dependencies": {
@@ -19,10 +19,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build:types": "tsc --declaration true --noEmit false --emitDeclarationOnly true",
+    "build:react": "babel src/component-library -d dist --extensions \".ts,.tsx\" --copy-files",
+    "build": "rm -rf dist && yarn build:types && yarn build:react",
+    "build:react-app": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/component-library -d dist --copy-files --extensions .ts,.tsx,.d.ts && cp src/index.d.ts dist/index.d.ts"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
